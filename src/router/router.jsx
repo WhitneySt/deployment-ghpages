@@ -13,11 +13,11 @@ const Router = () => {
       <Routes>
         <Route element={<Layout />}>
           <Route element={<PublicRouter isAuthenticate={true} />}>
-            <Route path='/login' element={<Login />} />
-            <Route path='/register' element={ <Register/>} />
+            <Route path='/deployment-ghpages/login' element={<Login />} />
+            <Route path='/deployment-ghpages/register' element={ <Register/>} />
           </Route>
           <Route element={<PrivateRouter isAuthenticate={true} />}>
-            <Route path='/' element={ <Home/>} />
+            <Route path='/deployment-ghpages' element={ <Home/>} />
           </Route>
         </Route>
       </Routes>

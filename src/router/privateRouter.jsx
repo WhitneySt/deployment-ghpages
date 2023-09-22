@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navigate, Outlet } from 'react-router-dom'
 
-const PrivateRouter = ({ isAuthenticate, redirectPath = '/login',
+const PrivateRouter = ({ isAuthenticate, redirectPath = '/deployment-ghpages/login',
   children }) => {
   if (!isAuthenticate) return <Navigate to={redirectPath} replace />
   return (
