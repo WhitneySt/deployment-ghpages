@@ -11,13 +11,13 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Layout />}>
+        <Route element={<Layout />}>
           <Route element={<PublicRouter isAuthenticate={true} />}>
-            <Route path='login' element={<Login />} />
-            <Route path='register' element={ <Register/>} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={ <Register/>} />
           </Route>
           <Route element={<PrivateRouter isAuthenticate={true} />}>
-            <Route index element={ <Home/>} />
+            <Route path='/' element={ <Home/>} />
           </Route>
         </Route>
       </Routes>
